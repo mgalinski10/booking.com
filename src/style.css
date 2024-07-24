@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  color: white;
+  background-color: #013b95;
+  display: grid;
+  grid-template-areas: ". bar ." ". nav .";
+}
+
+.header-bar {
+  grid-area: bar;
+  display: grid;
+  grid-template-areas: "logo bar";
+  padding: 1rem;
+}
+.header-bar h2 {
+  grid-area: logo;
+  font-size: 1.5rem;
+}
+.header-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: bar;
+  list-style-type: none;
+  font-size: 1.1rem;
+}
+.header-bar ul button {
+  padding: 0.5rem;
+  color: #016ce4;
+  border-radius: 0.2rem;
+}/*# sourceMappingURL=style.css.map */

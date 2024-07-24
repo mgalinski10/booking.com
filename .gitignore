@@ -1,0 +1,96 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Dependency directories
+jspm_packages/
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Linux
+*~
+
+# Coverage reports
+coverage/
+
+# Storybook
+storybook-static/
+
+# Other
+*.tgz
+*.zip
+*.tar.gz
+*.rar
+
+# Tests
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# Miscellaneous
+*.log
+*.bak
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# Build tools
+public/static/
+
+# Yarn and npm lock files (optional, depending on your setup)
+yarn.lock
+package-lock.json
+
+# Prettier
+.prettierignore
+
+# Next.js
+.next/
+out/
+
+# Vite
+.vite/
+dist/
+
+# Create React App
+*.env
+public/
+
