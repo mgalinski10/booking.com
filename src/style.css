@@ -38,4 +38,21 @@ header {
   padding: 0.5rem;
   color: #016ce4;
   border-radius: 0.2rem;
+}
+
+.nav-bar {
+  grid-area: nav;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 1rem;
+}
+.nav-bar ul li {
+  border: 1px solid white;
+  border-radius: 1.5rem;
+  padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */
