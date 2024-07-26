@@ -14,25 +14,30 @@ header {
   background-color: #013b95;
   display: grid;
   grid-template-areas: ". bar ." ". nav .";
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .header-bar {
   grid-area: bar;
-  display: grid;
-  grid-template-areas: "logo bar";
-  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header-bar h2 {
   grid-area: logo;
   font-size: 1.5rem;
+  padding-right: 200px;
 }
 .header-bar ul {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   grid-area: bar;
+  align-items: center;
   list-style-type: none;
   font-size: 1.1rem;
+}
+.header-bar ul li {
+  padding-right: 40px;
 }
 .header-bar ul button {
   padding: 0.5rem;
@@ -46,13 +51,9 @@ header {
 .nav-bar ul {
   display: flex;
   justify-content: flex-start;
-  gap: 2rem;
   list-style-type: none;
-  padding: 1rem;
 }
 .nav-bar ul li {
-  border: 1px solid white;
-  border-radius: 1.5rem;
-  padding: 0.7rem 1.2rem 0.7rem 1.2rem;
-  font-size: 0.9rem;
+  padding: 20px 20px 20px 0;
+  font-size: 0.9em;
 }/*# sourceMappingURL=style.css.map */
