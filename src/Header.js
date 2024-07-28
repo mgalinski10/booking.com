@@ -1,17 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 import { navItems } from "./resources/navItems";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 import NavItem from "./NavItem";
 
 export default function Header() {
   return (
     <header>
       <div className="header-bar">
-        <div>
+        <div className="logo">
           <h2>Booking.com</h2>
         </div>
-        <div>
-          <ul>
+        <div className="bar">
+          <ul className="max-width">
             <li>PLN</li>
             <li>
               <div className="poland">POL</div>
@@ -25,6 +27,14 @@ export default function Header() {
             </li>
             <li>
               <button>Zaloguj się</button>
+            </li>
+          </ul>
+          <ul className="min-width">
+            <li>
+              <FontAwesomeIcon icon={faUser} />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faBars} />
             </li>
           </ul>
         </div>
