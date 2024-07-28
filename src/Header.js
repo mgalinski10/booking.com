@@ -3,6 +3,7 @@ import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 import { navItems } from "./resources/navItems";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import NavItem from "./NavItem";
 
 export default function Header() {
@@ -40,10 +41,18 @@ export default function Header() {
         </div>
       </div>
       <div className="nav-bar">
-        <ul>
+        <ul className="max-width">
           {navItems.map((item) => (
             <NavItem itemObj={item} />
           ))}
+        </ul>
+        <ul className="min-width">
+          {navItems.map((item) =>
+            item.key < 2 ? <NavItem itemObj={item} /> : ""
+          )}
+          <li>
+            Więcej <FontAwesomeIcon icon={faCaretDown} />
+          </li>
         </ul>
       </div>
     </header>

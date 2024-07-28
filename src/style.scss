@@ -76,7 +76,7 @@ body {
     display: grid;
     align-items: center;
 
-    ul {
+    .max-width {
       list-style-type: none;
 
       font-size: 0.9rem;
@@ -85,10 +85,9 @@ body {
         display: inline;
         padding: 11px 16px;
       }
-
-      .min-width {
-        display: none;
-      }
+    }
+    .min-width {
+      display: none;
     }
   }
 }
@@ -152,8 +151,13 @@ body {
     display: grid;
     align-items: center;
 
-    ul {
+    .max-width {
+      display: none;
+    }
+
+    .min-width {
       list-style-type: none;
+
       font-size: 0.9rem;
 
       li {

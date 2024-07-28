@@ -59,15 +59,15 @@ body {
     display: grid;
     align-items: center;
   }
-  .nav-bar ul {
+  .nav-bar .max-width {
     list-style-type: none;
     font-size: 0.9rem;
   }
-  .nav-bar ul li {
+  .nav-bar .max-width li {
     display: inline;
     padding: 11px 16px;
   }
-  .nav-bar ul .min-width {
+  .nav-bar .min-width {
     display: none;
   }
 }
@@ -116,11 +116,14 @@ body {
     display: grid;
     align-items: center;
   }
-  .nav-bar ul {
+  .nav-bar .max-width {
+    display: none;
+  }
+  .nav-bar .min-width {
     list-style-type: none;
     font-size: 0.9rem;
   }
-  .nav-bar ul li {
+  .nav-bar .min-width li {
     display: inline;
     padding: 11px 16px;
   }
