@@ -1,58 +1,48 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
+import { faCircleQuestion, faUser } from "@fortawesome/free-regular-svg-icons";
+import { faBars, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+
 import { navItems } from "./resources/navItems";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import NavItem from "./NavItem";
 
 export default function Header() {
   return (
     <header>
-      <div className="header-bar">
-        <div className="logo">
-          <h2>Booking.com</h2>
-        </div>
-        <div className="bar">
-          <ul className="max-width">
-            <li>PLN</li>
-            <li>
-              <div className="poland">POL</div>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faCircleQuestion} />
-            </li>
-            <li>Udostępnij obiekt</li>
-            <li>
-              <button>Zarejestruj się</button>
-            </li>
-            <li>
-              <button>Zaloguj się</button>
-            </li>
-          </ul>
-          <ul className="min-width">
-            <li>
-              <FontAwesomeIcon icon={faUser} />
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faBars} />
-            </li>
-          </ul>
-        </div>
+      <div className="upper-bar">
+        <ul className="desktop">
+          <li>
+            <h2>Booking.com</h2>
+          </li>
+          <li>PLN</li>
+          <li>POL</li>
+          <li>
+            <FontAwesomeIcon icon={faCircleQuestion} />
+          </li>
+          <li>Udostępnij obiekt</li>
+          <li>
+            <button>Zarejestruj się</button>
+          </li>
+          <li>
+            <button>Zaloguj się</button>
+          </li>
+        </ul>
+        <ul className="mobile">
+          <li>
+            <h2>Booking.com</h2>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faUser} />
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faBars} />
+          </li>
+        </ul>
       </div>
-      <div className="nav-bar">
-        <ul className="max-width">
+      <div className="lower-bar">
+        <ul className="desktop">
           {navItems.map((item) => (
             <NavItem itemObj={item} />
           ))}
-        </ul>
-        <ul className="min-width">
-          {navItems.map((item) =>
-            item.key < 2 ? <NavItem itemObj={item} /> : ""
-          )}
-          <li>
-            Więcej <FontAwesomeIcon icon={faCaretDown} />
-          </li>
         </ul>
       </div>
     </header>
