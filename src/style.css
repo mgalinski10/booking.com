@@ -78,4 +78,68 @@ header .lower-bar .desktop li {
   header .lower-bar .desktop {
     display: none;
   }
+}
+
+content {
+  background-color: #013b95;
+  display: grid;
+  grid-template-areas: "left mid right";
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  padding: 90px 0 90px 0;
+}
+content .main-slogan {
+  color: white;
+  grid-area: mid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+content .main-slogan h1 {
+  font-size: 3vw;
+  padding: 5px 0 5px 0;
+}
+content .main-slogan h2 {
+  font-size: 1.5vw;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "left upper-mid right" "left mid right";
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.4fr 1fr;
+}
+main .form-section {
+  grid-area: upper-mid;
+}
+main .form-section form {
+  background-color: #ffb701;
+  position: relative;
+  top: -50%;
+  border: 4px solid #ffb701;
+  border-radius: 1cap;
+  display: grid;
+  grid-template-areas: "left left-mid right-mid right";
+  gap: 5px;
+}
+main .form-section form div {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 1cap;
+}
+main .form-section form .fourth {
+  padding: 0px;
+  display: block;
+  background-color: #ffb701;
+}
+main .form-section form .fourth button {
+  border-radius: 1cap;
+  width: 100%;
+  height: 100%;
+  background-color: #016ce4;
+  color: white;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */

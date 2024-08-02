@@ -79,7 +79,7 @@ header {
       }
     }
   }
-  //  1000px !!!!!!!!!!
+
   // LOWER
   .lower-bar {
     grid-area: lower-mid;
@@ -94,10 +94,6 @@ header {
 
       padding: 5px;
 
-      // :first-child {
-      //   border: 1px solid white;
-      // }
-
       li {
         padding: 10px;
         margin-right: 30px;
@@ -107,6 +103,91 @@ header {
     @media (max-width: 1100px) {
       .desktop {
         display: none;
+      }
+    }
+  }
+}
+
+content {
+  background-color: $header-color;
+
+  display: grid;
+  grid-template-areas: "left mid right";
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+
+  padding: 90px 0 90px 0;
+
+  .main-slogan {
+    color: white;
+    grid-area: mid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h1 {
+      font-size: 3vw;
+      padding: 5px 0 5px 0;
+    }
+
+    h2 {
+      font-size: 1.5vw;
+      font-weight: 300;
+
+      padding: 5px 0 5px 0;
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "left upper-mid right"
+    "left mid right";
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.4fr 1fr;
+
+  .form-section {
+    grid-area: upper-mid;
+
+    form {
+      background-color: $form-border-color;
+      position: relative;
+      top: -50%;
+
+      border: 4px solid $form-border-color;
+      border-radius: 1cap;
+
+      display: grid;
+      grid-template-areas: "left left-mid right-mid right";
+      gap: 5px;
+
+      div {
+        background-color: white;
+
+        display: flex;
+        justify-content: center;
+
+        padding: 15px;
+
+        border-radius: 1cap;
+      }
+
+      .fourth {
+        padding: 0px;
+        display: block;
+        background-color: $form-border-color;
+
+        button {
+          border-radius: 1cap;
+          width: 100%;
+          height: 100%;
+
+          background-color: $button-color;
+          color: white;
+
+          font-size: 20px;
+        }
       }
     }
   }
