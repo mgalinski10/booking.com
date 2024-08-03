@@ -126,15 +126,38 @@ content {
     justify-content: flex-start;
 
     h1 {
-      font-size: 3vw;
+      font-size: 2.5rem;
       padding: 5px 0 5px 0;
     }
 
     h2 {
-      font-size: 1.5vw;
+      font-size: 1.5rem;
       font-weight: 300;
 
       padding: 5px 0 5px 0;
+    }
+  }
+
+  @media screen and (max-width: 970px) {
+    .main-slogan {
+      color: white;
+      grid-area: mid;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      h1 {
+        font-size: 5vw;
+        padding: 5px 0 5px 0;
+      }
+
+      h2 {
+        font-size: 3vw;
+        font-weight: 300;
+
+        padding: 5px 0 5px 0;
+      }
     }
   }
 }
@@ -160,26 +183,50 @@ main {
 
       display: grid;
       grid-template-areas: "left left-mid right-mid right";
-      gap: 5px;
+      grid-template-columns: 0.6fr 0.7fr 0.7fr 0.3fr;
 
-      div {
+      gap: 3px;
+
+      .form-item {
         background-color: white;
-
-        display: flex;
-        justify-content: center;
+        font-size: 14px;
 
         padding: 15px;
 
-        border-radius: 1cap;
+        border-radius: 0.5cap;
+
+        .inside-item {
+          display: flex;
+          align-items: center;
+
+          :first-child {
+            padding-right: 8px;
+          }
+
+          input::placeholder {
+            color: black;
+          }
+
+          .where-you-go {
+            outline: none;
+
+            font-size: 14px;
+            color: black;
+          }
+        }
       }
 
-      .fourth {
+      .form-item-btn:hover {
+        cursor: pointer;
+      }
+
+      .search-button {
         padding: 0px;
         display: block;
         background-color: $form-border-color;
 
         button {
-          border-radius: 1cap;
+          border-radius: 0.5cap;
           width: 100%;
           height: 100%;
 
@@ -187,6 +234,27 @@ main {
           color: white;
 
           font-size: 20px;
+        }
+
+        button:hover {
+          cursor: pointer;
+          background-color: #1254bb;
+          transition: background-color 0.5s;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1245px) {
+      form {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 100px;
+
+        .search-button {
+          button {
+            padding: 10px;
+          }
         }
       }
     }

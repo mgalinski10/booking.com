@@ -95,13 +95,31 @@ content .main-slogan {
   justify-content: flex-start;
 }
 content .main-slogan h1 {
-  font-size: 3vw;
+  font-size: 2.5rem;
   padding: 5px 0 5px 0;
 }
 content .main-slogan h2 {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: 300;
   padding: 5px 0 5px 0;
+}
+@media screen and (max-width: 970px) {
+  content .main-slogan {
+    color: white;
+    grid-area: mid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  content .main-slogan h1 {
+    font-size: 5vw;
+    padding: 5px 0 5px 0;
+  }
+  content .main-slogan h2 {
+    font-size: 3vw;
+    font-weight: 300;
+    padding: 5px 0 5px 0;
+  }
 }
 
 main {
@@ -121,25 +139,61 @@ main .form-section form {
   border-radius: 1cap;
   display: grid;
   grid-template-areas: "left left-mid right-mid right";
-  gap: 5px;
+  grid-template-columns: 0.6fr 0.7fr 0.7fr 0.3fr;
+  gap: 3px;
 }
-main .form-section form div {
+main .form-section form .form-item {
   background-color: white;
-  display: flex;
-  justify-content: center;
+  font-size: 14px;
   padding: 15px;
-  border-radius: 1cap;
+  border-radius: 0.5cap;
 }
-main .form-section form .fourth {
+main .form-section form .form-item .inside-item {
+  display: flex;
+  align-items: center;
+}
+main .form-section form .form-item .inside-item :first-child {
+  padding-right: 8px;
+}
+main .form-section form .form-item .inside-item input::-moz-placeholder {
+  color: black;
+}
+main .form-section form .form-item .inside-item input::placeholder {
+  color: black;
+}
+main .form-section form .form-item .inside-item .where-you-go {
+  outline: none;
+  font-size: 14px;
+  color: black;
+}
+main .form-section form .form-item-btn:hover {
+  cursor: pointer;
+}
+main .form-section form .search-button {
   padding: 0px;
   display: block;
   background-color: #ffb701;
 }
-main .form-section form .fourth button {
-  border-radius: 1cap;
+main .form-section form .search-button button {
+  border-radius: 0.5cap;
   width: 100%;
   height: 100%;
   background-color: #016ce4;
   color: white;
   font-size: 20px;
+}
+main .form-section form .search-button button:hover {
+  cursor: pointer;
+  background-color: #1254bb;
+  transition: background-color 0.5s;
+}
+@media screen and (max-width: 1245px) {
+  main .form-section form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  main .form-section form .search-button button {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
