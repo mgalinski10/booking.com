@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleQuestion, faUser } from "@fortawesome/free-regular-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import { navItems } from "./resources/navItems";
+import { navItems } from "./navItems";
 import NavItem from "./NavItem";
 
 export default function Header() {

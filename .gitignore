@@ -73,7 +73,7 @@ storybook-static/
 *.temp
 
 # Build tools
-public/static/
+# public/static/
 
 # Yarn and npm lock files (optional, depending on your setup)
 yarn.lock
@@ -92,5 +92,5 @@ dist/
 
 # Create React App
 *.env
-public/
+# public/
 

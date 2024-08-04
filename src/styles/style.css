@@ -124,9 +124,9 @@ content .main-slogan h2 {
 
 main {
   display: grid;
-  grid-template-areas: "left upper-mid right" "left mid right";
+  grid-template-areas: "left upper-mid right" "left mid right" "left mid right";
   grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.4fr 1fr;
+  grid-template-rows: 0.3fr 1fr;
 }
 main .form-section {
   grid-area: upper-mid;
@@ -134,7 +134,8 @@ main .form-section {
 main .form-section form {
   background-color: #ffb701;
   position: relative;
-  top: -50%;
+  top: -25%;
+  margin-bottom: 20px;
   border: 4px solid #ffb701;
   border-radius: 1cap;
   display: grid;
@@ -191,9 +192,83 @@ main .form-section form .search-button button:hover {
   main .form-section form {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    top: -25%;
   }
   main .form-section form .search-button button {
     padding: 10px;
   }
+  main .form-section .flight-checkbox {
+    bottom: 15%;
+  }
+}
+main .form-section .flight-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  bottom: 25%;
+}
+main .form-section .flight-checkbox input[type=checkbox] {
+  width: 17px;
+  height: 17px;
+  border-radius: 1cap;
+  cursor: pointer;
+}
+main .form-section .flight-checkbox label {
+  font-size: 14px;
+  margin-left: 15px;
+}
+main .hotels-section {
+  grid-area: mid;
+}
+main .hotels-section .main-title {
+  margin-bottom: 20px;
+}
+main .hotels-section .hotels-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+main .hotels-section .hotels-list .container {
+  width: 300px;
+  height: 320px;
+  border-radius: 0.5cap;
+  border: 1px solid lightgrey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+main .hotels-section .hotels-list .container .hotel-image {
+  grid-area: image;
+  width: 100%;
+  height: 70%;
+}
+main .hotels-section .hotels-list .container .hotel-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 0.5cap 0.5cap 0 0;
+}
+main .hotels-section .hotels-list .container .description {
+  grid-area: description;
+  padding: 10px;
+}
+main .hotels-section .hotels-list .container .description h2 {
+  font-size: 16px;
+}
+main .hotels-section .hotels-list .container .description p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+main .hotels-section .hotels-list .container .description .rating {
+  display: flex;
+  align-items: center;
+}
+main .hotels-section .hotels-list .container .description .rating .rate {
+  border-radius: 5px 5px 5px 0;
+  padding: 2px;
+  margin-right: 8px;
+  font-size: 15px;
+  color: white;
+  font-weight: 200;
+  background-color: #1254bb;
 }/*# sourceMappingURL=style.css.map */

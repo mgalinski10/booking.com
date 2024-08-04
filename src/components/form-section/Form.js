@@ -26,7 +26,7 @@ export default function Form() {
 
       <div className="form-item form-item-btn">
         <div className="inside-item">
-          <FontAwesomeIcon icon={faUser} />2 dorosłych - 0 dzieci - 1 pokój
+          <FontAwesomeIcon icon={faUser} />2 dorosłych · 0 dzieci · 1 pokój
         </div>
       </div>
 

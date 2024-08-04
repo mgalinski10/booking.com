@@ -1,7 +1,12 @@
-import "./style.css";
-import Header from "./Header";
-import MainSlogan from "./MainSlogan";
-import Form from "./Form";
+import "./styles/style.css";
+
+import Header from "./components/header/Header";
+
+import Form from "./components/form-section/Form";
+import MainSlogan from "./components/form-section/MainSlogan";
+
+import Section from "./components/hotels-section/Section";
+import HotelsList from "./components/hotels-section/HotelsList";
 
 export default function App() {
   return (
@@ -13,7 +18,17 @@ export default function App() {
       <main>
         <section className="form-section">
           <Form />
+          <div className="flight-checkbox">
+            <input type="checkbox" />
+            <label>Szukam lotów</label>
+          </div>
         </section>
+        <Section
+          className={"hotels-section"}
+          title={"Nadal interesują Cię te obiekty?"}
+        >
+          <HotelsList />
+        </Section>
       </main>
     </>
   );

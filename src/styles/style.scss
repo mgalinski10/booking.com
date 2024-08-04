@@ -166,9 +166,10 @@ main {
   display: grid;
   grid-template-areas:
     "left upper-mid right"
+    "left mid right"
     "left mid right";
   grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.4fr 1fr;
+  grid-template-rows: 0.3fr 1fr;
 
   .form-section {
     grid-area: upper-mid;
@@ -176,7 +177,8 @@ main {
     form {
       background-color: $form-border-color;
       position: relative;
-      top: -50%;
+      top: -25%;
+      margin-bottom: 20px;
 
       border: 4px solid $form-border-color;
       border-radius: 1cap;
@@ -249,11 +251,102 @@ main {
         display: flex;
         flex-direction: column;
 
-        margin-top: 100px;
+        top: -25%;
 
         .search-button {
           button {
             padding: 10px;
+          }
+        }
+      }
+
+      .flight-checkbox {
+        bottom: 15%;
+      }
+    }
+
+    .flight-checkbox {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      position: relative;
+      bottom: 25%;
+
+      input[type="checkbox"] {
+        width: 17px;
+        height: 17px;
+        border-radius: 1cap;
+        cursor: pointer;
+      }
+
+      label {
+        font-size: 14px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .hotels-section {
+    grid-area: mid;
+
+    .main-title {
+      margin-bottom: 20px;
+    }
+
+    .hotels-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+
+      .container {
+        width: 300px;
+        height: 320px;
+        border-radius: 0.5cap;
+        border: 1px solid lightgrey;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        .hotel-image {
+          grid-area: image;
+          width: 100%;
+          height: 70%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 0.5cap 0.5cap 0 0;
+          }
+        }
+
+        .description {
+          grid-area: description;
+          padding: 10px;
+
+          h2 {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 13px;
+            margin-bottom: 5px;
+          }
+
+          .rating {
+            display: flex;
+            align-items: center;
+
+            .rate {
+              border-radius: 5px 5px 5px 0;
+              padding: 2px;
+              margin-right: 8px;
+
+              font-size: 15px;
+              color: white;
+              font-weight: 200;
+
+              background-color: #1254bb;
+            }
           }
         }
       }
