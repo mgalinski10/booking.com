@@ -9,326 +9,275 @@
 
 body {
   font-family: $font;
-  min-height: 100vh;
 }
 
 header {
   background-color: $header-color;
   color: white;
+  width: 100%;
 
-  display: grid;
-  grid-template-areas:
-    "left upper-mid right"
-    "left lower-mid right";
-  grid-template-columns: 0.5fr 2fr 0.5fr;
+  nav {
+    max-width: 1000px;
+    margin: auto auto;
 
-  // UPPER
-  .upper-bar {
-    grid-area: upper-mid;
-
-    .desktop {
-      list-style: none;
-      width: 100%;
-
+    ul {
       display: flex;
       align-items: center;
 
-      padding: 5px;
+      list-style: none;
 
-      li {
-        padding: 10px;
-      }
+      padding: 10px;
+    }
+
+    .upper-nav {
+      display: flex;
+      justify-content: space-between;
 
       :first-child {
         margin-right: auto;
       }
 
-      button {
-        color: $button-color;
-        padding: 10px;
-
-        border-radius: 1cap;
-      }
-    }
-
-    .mobile {
-      display: none;
-    }
-
-    @media (max-width: 1100px) {
-      .desktop {
-        display: none;
-      }
-
-      .mobile {
-        list-style: none;
-        width: 100%;
-
-        display: flex;
-        align-items: center;
-
-        padding: 5px;
-
-        li {
-          padding: 10px;
-        }
-
-        :first-child {
-          margin-right: auto;
-        }
-      }
-    }
-  }
-
-  // LOWER
-  .lower-bar {
-    grid-area: lower-mid;
-    font-size: 14px;
-
-    .desktop {
-      list-style: none;
-      width: 100%;
-
-      display: flex;
-      align-items: center;
-
-      padding: 5px;
-
       li {
         padding: 10px;
-        margin-right: 30px;
+
+        button {
+          color: $button-color;
+          padding: 5px;
+        }
       }
     }
 
-    @media (max-width: 1100px) {
-      .desktop {
+    @media screen and (width >= 800px) {
+      .small-screen {
+        display: none;
+      }
+    }
+
+    .lower-nav {
+      display: flex;
+      justify-content: flex-start;
+
+      li {
+        font-size: 14px;
+
+        padding: 10px;
+        margin-right: 40px;
+        border: 1px solid white;
+        border-radius: 2cap;
+      }
+
+      li:hover {
+        cursor: pointer;
+        background-color: #1e4d9b;
+      }
+    }
+
+    @media screen and (width < 800px) {
+      .big-screen {
         display: none;
       }
     }
   }
 }
 
-content {
+.main-slogan {
+  color: white;
   background-color: $header-color;
+  width: 100vw;
 
-  display: grid;
-  grid-template-areas: "left mid right";
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-
-  padding: 90px 0 90px 0;
-
-  .main-slogan {
-    color: white;
-    grid-area: mid;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  .slogan-content {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
 
     h1 {
-      font-size: 2.5rem;
-      padding: 5px 0 5px 0;
+      margin-top: 80px;
+
+      font-size: 3rem;
     }
 
     h2 {
-      font-size: 1.5rem;
-      font-weight: 300;
+      margin-bottom: 80px;
 
-      padding: 5px 0 5px 0;
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
+  }
+}
+
+@media screen and (width < 1000px) {
+  .main-slogan {
+    text-align: center;
+    .slogan-content {
+      width: 100%;
+      h1,
+      h2 {
+        font-size: 5vw;
+      }
+    }
+  }
+}
+
+form {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  transform: translateY(-50%);
+
+  background-color: $form-border-color;
+
+  border: 4px solid $form-border-color;
+  border-radius: 1cap;
+
+  display: grid;
+  grid-template-areas: "left left-mid right-mid right";
+  grid-template-columns: 0.6fr 0.7fr 0.7fr 0.3fr;
+
+  gap: 3px;
+
+  .form-item {
+    background-color: white;
+    font-size: 14px;
+
+    padding: 15px;
+
+    border-radius: 0.5cap;
+
+    .inside-item {
+      display: flex;
+      align-items: center;
+
+      :first-child {
+        padding-right: 8px;
+      }
+
+      input::placeholder {
+        color: black;
+      }
+
+      .where-you-go {
+        outline: none;
+
+        font-size: 14px;
+        color: black;
+      }
     }
   }
 
-  @media screen and (max-width: 970px) {
-    .main-slogan {
+  .form-item-btn:hover {
+    cursor: pointer;
+  }
+
+  .search-button {
+    padding: 0px;
+    display: block;
+    background-color: $form-border-color;
+
+    button {
+      border-radius: 0.5cap;
+      width: 100%;
+      height: 100%;
+
+      background-color: $button-color;
       color: white;
-      grid-area: mid;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      font-size: 20px;
+    }
 
-      h1 {
-        font-size: 5vw;
-        padding: 5px 0 5px 0;
-      }
+    button:hover {
+      cursor: pointer;
+      background-color: #1254bb;
+      transition: background-color 0.5s;
+    }
+  }
+}
 
-      h2 {
-        font-size: 3vw;
-        font-weight: 300;
+.flight-checkbox {
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 40px;
 
-        padding: 5px 0 5px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    border-radius: 1cap;
+    cursor: pointer;
+  }
+
+  label {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  form {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    transform: translateY(-25%);
+
+    .search-button {
+      button {
+        padding: 10px;
       }
     }
+  }
+
+  .flight-checkbox {
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
   }
 }
 
 main {
-  display: grid;
-  grid-template-areas:
-    "left upper-mid right"
-    "left mid right"
-    "left mid right";
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.3fr 1fr;
-
-  .form-section {
-    grid-area: upper-mid;
-
-    form {
-      background-color: $form-border-color;
-      position: relative;
-      top: -25%;
-      margin-bottom: 20px;
-
-      border: 4px solid $form-border-color;
-      border-radius: 1cap;
-
-      display: grid;
-      grid-template-areas: "left left-mid right-mid right";
-      grid-template-columns: 0.6fr 0.7fr 0.7fr 0.3fr;
-
-      gap: 3px;
-
-      .form-item {
-        background-color: white;
-        font-size: 14px;
-
-        padding: 15px;
-
-        border-radius: 0.5cap;
-
-        .inside-item {
-          display: flex;
-          align-items: center;
-
-          :first-child {
-            padding-right: 8px;
-          }
-
-          input::placeholder {
-            color: black;
-          }
-
-          .where-you-go {
-            outline: none;
-
-            font-size: 14px;
-            color: black;
-          }
-        }
-      }
-
-      .form-item-btn:hover {
-        cursor: pointer;
-      }
-
-      .search-button {
-        padding: 0px;
-        display: block;
-        background-color: $form-border-color;
-
-        button {
-          border-radius: 0.5cap;
-          width: 100%;
-          height: 100%;
-
-          background-color: $button-color;
-          color: white;
-
-          font-size: 20px;
-        }
-
-        button:hover {
-          cursor: pointer;
-          background-color: #1254bb;
-          transition: background-color 0.5s;
-        }
-      }
-    }
-
-    @media screen and (max-width: 1245px) {
-      form {
-        display: flex;
-        flex-direction: column;
-
-        top: -25%;
-
-        .search-button {
-          button {
-            padding: 10px;
-          }
-        }
-      }
-
-      .flight-checkbox {
-        bottom: 15%;
-      }
-    }
-
-    .flight-checkbox {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      position: relative;
-      bottom: 25%;
-
-      input[type="checkbox"] {
-        width: 17px;
-        height: 17px;
-        border-radius: 1cap;
-        cursor: pointer;
-      }
-
-      label {
-        font-size: 14px;
-        margin-left: 15px;
-      }
-    }
-  }
+  max-width: 1000px;
+  margin: auto auto;
 
   .hotels-section {
-    grid-area: mid;
-
     .main-title {
+      width: 100%;
       margin-bottom: 20px;
     }
 
     .hotels-list {
       list-style: none;
+
       display: flex;
-      justify-content: space-around;
 
       .container {
-        width: 300px;
-        height: 320px;
         border-radius: 0.5cap;
         border: 1px solid lightgrey;
+        margin: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
         .hotel-image {
-          grid-area: image;
-          width: 100%;
           height: 70%;
 
           img {
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
             border-radius: 0.5cap 0.5cap 0 0;
+            max-width: 100%;
           }
         }
 
         .description {
-          grid-area: description;
+          height: 30%;
           padding: 10px;
 
           h2 {
-            font-size: 16px;
+            font-size: 14px;
           }
 
           p {
-            font-size: 13px;
+            font-size: 0.8rem;
             margin-bottom: 5px;
           }
 
@@ -345,7 +294,82 @@ main {
               color: white;
               font-weight: 200;
 
-              background-color: #1254bb;
+              background-color: $header-color;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (width < 1000px) {
+      .main-title {
+        text-align: center;
+        font-size: 5vw;
+      }
+      .hotels-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        li {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .container {
+          height: 220px;
+          width: 170px;
+
+          border-radius: 0.5cap;
+          border: 1px solid lightgrey;
+
+          margin: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+          .hotel-image {
+            height: 60%;
+
+            img {
+              border-radius: 0.5cap 0.5cap 0 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .description {
+            height: 40%;
+            padding: 10px;
+
+            h2 {
+              font-size: 11px;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-size: 0.7rem;
+              margin-bottom: 10px;
+            }
+
+            .rating {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+
+              p {
+                font-size: 10px;
+                margin: 0;
+              }
+
+              .rate {
+                border-radius: 5px 5px 5px 0;
+                padding: 2px;
+                margin-right: 8px;
+
+                font-size: 8px;
+                color: white;
+                font-weight: 200;
+
+                background-color: $header-color;
+              }
             }
           }
         }

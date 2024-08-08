@@ -8,8 +8,8 @@ import NavItem from "./NavItem";
 export default function Header() {
   return (
     <header>
-      <div className="upper-bar">
-        <ul className="desktop">
+      <nav>
+        <ul className="upper-nav big-screen">
           <li>
             <h2>Booking.com</h2>
           </li>
@@ -26,7 +26,8 @@ export default function Header() {
             <button>Zaloguj się</button>
           </li>
         </ul>
-        <ul className="mobile">
+
+        <ul className="upper-nav small-screen">
           <li>
             <h2>Booking.com</h2>
           </li>
@@ -37,14 +38,13 @@ export default function Header() {
             <FontAwesomeIcon icon={faBars} />
           </li>
         </ul>
-      </div>
-      <div className="lower-bar">
-        <ul className="desktop">
+
+        <ul className="lower-nav big-screen">
           {navItems.map((item) => (
             <NavItem itemObj={item} />
           ))}
         </ul>
-      </div>
+      </nav>
     </header>
   );
 }
