@@ -62,13 +62,16 @@ header {
 
         padding: 10px;
         margin-right: 40px;
-        border: 1px solid white;
         border-radius: 2cap;
       }
 
       li:hover {
         cursor: pointer;
         background-color: #1e4d9b;
+      }
+
+      .nav-item--active {
+        border: 1px solid white;
       }
     }
 

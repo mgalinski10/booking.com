@@ -48,3 +48,5 @@ export default function Header() {
     </header>
   );
 }
+
+function handleOnClick() {}

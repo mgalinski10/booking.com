@@ -51,12 +51,14 @@ header nav .lower-nav li {
   font-size: 14px;
   padding: 10px;
   margin-right: 40px;
-  border: 1px solid white;
   border-radius: 2cap;
 }
 header nav .lower-nav li:hover {
   cursor: pointer;
   background-color: #1e4d9b;
+}
+header nav .lower-nav .nav-item--active {
+  border: 1px solid white;
 }
 @media screen and (width < 800px) {
   header nav .big-screen {
